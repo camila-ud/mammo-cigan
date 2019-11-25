@@ -39,9 +39,9 @@ def build_generator(input_x, input_mask, input_c, use_c=True):
 
     for _ in range(len(kernels)-1):
         shape = int(inputs[-1].shape[1].value/2)
-        img = tf.image.resize_nearest_neighbor(inputs[-1],(shape, shape))
+        img = tf.image.resize(inputs[-1],(shape, shape), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
         if use_c:
-            c = tf.image.resize_nearest_neighbor(input_c,(shape, shape)) # add attributes
+            c = tf.image.resize(input_c,(shape, shape), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR) # add attributes
             inputs.append(concatenate([img, c], axis=-1))
         else:
             inputs.append(img)
@@ -51,7 +51,7 @@ def build_generator(input_x, input_mask, input_c, use_c=True):
         kernel = kernels[i]
         if i > 0:
             shape = int(net.shape[1].value*2)
-            upsampled = tf.image.resize_nearest_neighbor(net, (shape, shape))
+            upsampled = tf.image.resize(net, (shape, shape), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
             input = concatenate([input, upsampled], axis=-1)
 
         shape = int(input.shape[1].value)
@@ -73,7 +73,7 @@ def build_discriminator(input_x, input_c, use_c=True):
     print("Building discriminator")
 
     def upsample(x, shape):
-        return tf.image.resize_nearest_neighbor(x, (int(shape.value), int(shape.value)))
+        return tf.image.resize(x, (int(shape.value), int(shape.value)), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
 
     weight_init = RandomNormal(mean=0., stddev=0.02)
     input_x = Input(tensor=input_x)
@@ -112,9 +112,9 @@ def build_discriminator(input_x, input_c, use_c=True):
 
 def build_vgg_net(ntype,nin,nwb=None, name=None):
     if ntype == 'conv':
-        return tf.nn.relu(tf.nn.conv2d(nin,nwb[0], strides=[1, 1, 1, 1], padding='SAME', name=name)+nwb[1])
+        return tf.nn.relu(tf.nn.conv2d(input=nin,filters=nwb[0], strides=[1, 1, 1, 1], padding='SAME', name=name)+nwb[1])
     elif ntype == 'pool':
-        return tf.nn.avg_pool(nin, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
+        return tf.nn.avg_pool2d(input=nin, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
 
 
 def get_weight_bias(vgg_layers,i):
@@ -126,7 +126,7 @@ def get_weight_bias(vgg_layers,i):
 
 
 def build_vgg19(input,reuse=False):
-    with tf.variable_scope("vgg", reuse=reuse) as scope:
+    with tf.compat.v1.variable_scope("vgg", reuse=reuse) as scope:
         net = {}
         vgg_rawnet = scipy.io.loadmat('VGG_Model/imagenet-vgg-verydeep-19.mat')
         vgg_layers = vgg_rawnet['layers'][0]

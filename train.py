@@ -58,16 +58,16 @@ class GENGAN:
 
         # Learning rate params
         self.global_step = tf.Variable(0, trainable=False)
-        self.learn_rate = tf.train.exponential_decay(learn_rate, self.global_step,
+        self.learn_rate = tf.compat.v1.train.exponential_decay(learn_rate, self.global_step,
                                                      500, 0.99, staircase=False)
 
         # Input variables
-        self.input_x = tf.placeholder(tf.float32, [None, self.patch_size, self.patch_size, 1])
-        self.input_mask = tf.placeholder(tf.float32, [None, self.patch_size, self.patch_size, 1])
-        self.input_real = tf.placeholder(tf.float32, [None, self.patch_size, self.patch_size, 1])
-        self.input_boundary = tf.placeholder(tf.float32, [None, self.patch_size, self.patch_size, 1])
-        self.input_c = tf.placeholder(tf.float32, [None, 1, 1, c_dims])
-        self.input_z = tf.placeholder(tf.float32, [None, 1, 1, z_dims])
+        self.input_x = tf.compat.v1.placeholder(tf.float32, [None, self.patch_size, self.patch_size, 1])
+        self.input_mask = tf.compat.v1.placeholder(tf.float32, [None, self.patch_size, self.patch_size, 1])
+        self.input_real = tf.compat.v1.placeholder(tf.float32, [None, self.patch_size, self.patch_size, 1])
+        self.input_boundary = tf.compat.v1.placeholder(tf.float32, [None, self.patch_size, self.patch_size, 1])
+        self.input_c = tf.compat.v1.placeholder(tf.float32, [None, 1, 1, c_dims])
+        self.input_z = tf.compat.v1.placeholder(tf.float32, [None, 1, 1, z_dims])
         self.fake_image = build_generator(self.input_x, self.input_mask, self.input_c, use_c=self.use_c)
 
         # Build discriminator
@@ -76,67 +76,67 @@ class GENGAN:
         D_fake, _ = self.discriminator([self.fake_image, self.input_c])
 
         # Set training variables
-        self.t_vars = tf.trainable_variables()
+        self.t_vars = tf.compat.v1.trainable_variables()
         self.d_vars = [ var for var in self.t_vars if var.name.startswith('d_')]
         self.g_vars = [ var for var in self.t_vars if var.name.startswith('g_')]
         self.c_vars = [ var for var in self.t_vars if var not in self.d_vars and var not in self.g_vars]
 
         # Set savers
-        self.saver = tf.train.Saver(self.g_vars + self.d_vars, max_to_keep=10000)
-        self.g_saver = tf.train.Saver(self.g_vars)
-        self.d_saver = tf.train.Saver(self.d_vars)
+        self.saver = tf.compat.v1.train.Saver(self.g_vars + self.d_vars, max_to_keep=10000)
+        self.g_saver = tf.compat.v1.train.Saver(self.g_vars)
+        self.d_saver = tf.compat.v1.train.Saver(self.d_vars)
 
         # Set loss functions
-        self.G_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=D_fake, labels=tf.ones_like(D_real)))
-        self.D_loss = (tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=D_real, labels=tf.ones_like(D_real))) + tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=D_fake, labels=tf.zeros_like(D_fake)))) / 2.0
+        self.G_loss = tf.reduce_mean(input_tensor=tf.nn.sigmoid_cross_entropy_with_logits(logits=D_fake, labels=tf.ones_like(D_real)))
+        self.D_loss = (tf.reduce_mean(input_tensor=tf.nn.sigmoid_cross_entropy_with_logits(logits=D_real, labels=tf.ones_like(D_real))) + tf.reduce_mean(input_tensor=tf.nn.sigmoid_cross_entropy_with_logits(logits=D_fake, labels=tf.zeros_like(D_fake)))) / 2.0
 
         # Set solvers
-        self.G_solver = tf.train.AdamOptimizer(learning_rate=self.learn_rate, beta1=0.9, beta2=0.999, epsilon=1e-08).minimize(self.G_loss, var_list=self.g_vars, global_step=self.global_step)
-        self.D_solver = tf.train.AdamOptimizer(learning_rate=self.learn_rate, beta1=0.9, beta2=0.999, epsilon=1e-08).minimize(self.D_loss, var_list=self.d_vars, global_step=self.global_step)
+        self.G_solver = tf.compat.v1.train.AdamOptimizer(learning_rate=self.learn_rate, beta1=0.9, beta2=0.999, epsilon=1e-08).minimize(self.G_loss, var_list=self.g_vars, global_step=self.global_step)
+        self.D_solver = tf.compat.v1.train.AdamOptimizer(learning_rate=self.learn_rate, beta1=0.9, beta2=0.999, epsilon=1e-08).minimize(self.D_loss, var_list=self.d_vars, global_step=self.global_step)
 
         # Build VGG networks
         vgg_real_c = build_vgg19(tf.multiply(self.input_real, 1 - self.input_mask))
         vgg_fake_c = build_vgg19(tf.multiply(self.fake_image, 1 - self.input_mask), reuse=True)
 
         # Extract VGG weights
-        self.G_loss_vgg = tf.reduce_mean(tf.abs(vgg_real_c['input'] - vgg_fake_c['input']))
+        self.G_loss_vgg = tf.reduce_mean(input_tensor=tf.abs(vgg_real_c['input'] - vgg_fake_c['input']))
         vgg_real = build_vgg19(tf.multiply(self.input_real, self.input_mask))
         vgg_fake = build_vgg19(tf.multiply(self.fake_image, self.input_mask), reuse=True)
-        self.G_loss_vgg += tf.reduce_mean(tf.abs(vgg_real['input'] - vgg_fake['input']))
+        self.G_loss_vgg += tf.reduce_mean(input_tensor=tf.abs(vgg_real['input'] - vgg_fake['input']))
         for i in range(1, 4):
             conv_str = 'pool' + str(i)
-            self.G_loss_vgg += tf.reduce_mean(tf.abs(vgg_real[conv_str] - vgg_fake[conv_str]))
+            self.G_loss_vgg += tf.reduce_mean(input_tensor=tf.abs(vgg_real[conv_str] - vgg_fake[conv_str]))
 
         vgg_real = build_vgg19(tf.multiply(self.input_real, self.input_boundary))
         vgg_fake = build_vgg19(tf.multiply(self.fake_image, self.input_boundary), reuse=True)
-        self.G_loss_vgg += tf.reduce_mean(tf.abs(vgg_real['input'] - vgg_fake['input']))
+        self.G_loss_vgg += tf.reduce_mean(input_tensor=tf.abs(vgg_real['input'] - vgg_fake['input']))
         for i in range(1, 4):
             conv_str = 'pool' + str(i)
-            self.G_loss_vgg += tf.reduce_mean(tf.abs(vgg_real[conv_str] - vgg_fake[conv_str]))
+            self.G_loss_vgg += tf.reduce_mean(input_tensor=tf.abs(vgg_real[conv_str] - vgg_fake[conv_str]))
 
         # Set VGG solver
-        self.VGG_solver = tf.train.AdamOptimizer(learning_rate=self.learn_rate).minimize(self.G_loss_vgg, global_step=self.global_step, var_list=self.g_vars)
+        self.VGG_solver = tf.compat.v1.train.AdamOptimizer(learning_rate=self.learn_rate).minimize(self.G_loss_vgg, global_step=self.global_step, var_list=self.g_vars)
 
         # L1 and boundary loss
         self.L1_loss = self.l1_factor * \
-                       tf.reduce_mean(tf.abs(self.alpha *
+                       tf.reduce_mean(input_tensor=tf.abs(self.alpha *
                        tf.multiply(self.input_mask, self.fake_image - self.input_real)) +
                        tf.abs((1 - self.alpha) *
                        tf.multiply(1 - self.input_mask, self.fake_image - self.input_real)))
 
-        self.L1_solver = tf.train.AdamOptimizer(learning_rate=self.learn_rate).minimize(self.L1_loss, global_step=self.global_step, var_list=self.g_vars)
-        self.boundary_loss = self.boundary_factor * tf.reduce_mean(tf.multiply(self.input_boundary, tf.abs(self.fake_image - self.input_real)))
-        self.boundary_solver = tf.train.AdamOptimizer(learning_rate=self.learn_rate).minimize(self.boundary_loss,
+        self.L1_solver = tf.compat.v1.train.AdamOptimizer(learning_rate=self.learn_rate).minimize(self.L1_loss, global_step=self.global_step, var_list=self.g_vars)
+        self.boundary_loss = self.boundary_factor * tf.reduce_mean(input_tensor=tf.multiply(self.input_boundary, tf.abs(self.fake_image - self.input_real)))
+        self.boundary_solver = tf.compat.v1.train.AdamOptimizer(learning_rate=self.learn_rate).minimize(self.boundary_loss,
                                                                                               global_step=self.global_step,
                                                                                               var_list=self.g_vars)
 
     def train_model(self):
-        with tf.Session() as self.sess:
-            self.sess.run(tf.global_variables_initializer())
+        with tf.compat.v1.Session() as self.sess:
+            self.sess.run(tf.compat.v1.global_variables_initializer())
             # If using existing model
             if not self.new_model:
                 # Load the VGG loss trained model
-                if self.load_vgg and tf.train.checkpoint_exists(models_dir + self.save_name + '_vgg'):
+                if self.load_vgg and tf.compat.v1.train.checkpoint_exists(models_dir + self.save_name + '_vgg'):
                     print('Loading vgg')
                     self.g_saver.restore(self.sess, models_dir + self.save_name + '_vgg')
                 # Load the GAN loss trained model
@@ -228,11 +228,11 @@ class GENGAN:
 
             print('Saving model')
             save(self.save_name, it, self.saver, self.sess)
-        tf.reset_default_graph()
+        tf.compat.v1.reset_default_graph()
 
     def validate_model(self):
-        with tf.Session() as self.sess:
-            self.sess.run(tf.global_variables_initializer())
+        with tf.compat.v1.Session() as self.sess:
+            self.sess.run(tf.compat.v1.global_variables_initializer())
             self.saver.restore(self.sess, models_dir + self.save_name)
             data_generator_val = generate_cpatches(self.batch_size, ctype=data_type)
             # Save some random validation samples
@@ -240,9 +240,9 @@ class GENGAN:
                 self.validate(i * 1000, data_generator_val, self.sess)
 
     def synthesize_dataset(self, num, batch_size=batch_size, limits=[None]*c_dims, sample_rates = [0.5, 0.5]):
-        with tf.Session() as self.sess:
+        with tf.compat.v1.Session() as self.sess:
             # Load model
-            self.sess.run(tf.global_variables_initializer())
+            self.sess.run(tf.compat.v1.global_variables_initializer())
             if self.ckpt_num is not None:
                 self.g_saver.restore(self.sess, checkpoints_dir + self.load_name+'_'+str(self.ckpt_num))
                 self.d_saver.restore(self.sess, checkpoints_dir + self.load_name+'_'+str(self.ckpt_num))
