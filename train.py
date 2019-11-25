@@ -157,14 +157,13 @@ class GENGAN:
 
             # iteration number
             it = 0
-            # number of VGG loss pre-training iterations
-            vgg_iters = 100
+            # number of VGG loss pre-training iterations (orig 100)
+            vgg_iters = 10
             # Number of iterations per epoch for each type of loss
             d_iters = 5
             g_iters = 1
             boundary_iters = 10
-            vgg_iters = 10
-            max_iters = 5000
+            max_iters = 200 #orig5000
             # Alternatively, train the D or G until loss drops below threshold
             D_loss_threshold = 0.3
             G_loss_threshold = 0.3
@@ -174,14 +173,13 @@ class GENGAN:
             if self.train_vgg:
                 print('Pre-training on VGG')
                 for i in range(vgg_iters):
-                    print('Iteration', i)
+                    print('Iteration', i,vgg_iters) #org(10)
                     VGG_loss_cur = self.train(self.sess, self.VGG_solver, self.G_loss_vgg, generator=data_generator, iters=5)
                     print('VGG loss', VGG_loss_cur)
                     self.validate(i, val_data_generator, self.sess)
                     save(self.save_name + '_vgg', it, self.g_saver, self.sess)
 
             while it < int(self.num_iterations):
-
                 it += 1
                 for j in range(1):
                     D_timer = 0
@@ -235,9 +233,9 @@ class GENGAN:
             self.sess.run(tf.compat.v1.global_variables_initializer())
             self.saver.restore(self.sess, models_dir + self.save_name)
             data_generator_val = generate_cpatches(self.batch_size, ctype=data_type)
+
             # Save some random validation samples
-            for i in range(1, 6):
-                self.validate(i * 1000, data_generator_val, self.sess)
+            self.validate(1,data_generator_val, self.sess)
 
     def synthesize_dataset(self, num, batch_size=batch_size, limits=[None]*c_dims, sample_rates = [0.5, 0.5]):
         with tf.compat.v1.Session() as self.sess:

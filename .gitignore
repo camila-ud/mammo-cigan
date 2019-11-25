@@ -1,5 +1,6 @@
 # ignore all logs
-*.log
 __pycache__
 VGG_Model
 patches.npz
+models
+checkpoints
