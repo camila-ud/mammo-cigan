@@ -152,10 +152,8 @@ class GENGAN:
             # Create data generators
             # Generators generate 256x256px patches
             print('Getting dataset')
-            data_generator = generate_cpatches(self.batch_size, sample_rates=self.sample_rates,
-                                               is_vanilla=self.is_vanilla, limits=self.limits, ctype=data_type)
-            val_data_generator = generate_cpatches(1, sample_rates=self.sample_rates, is_vanilla=self.is_vanilla,
-                                                   limits=['val_rand', 'val_rand'], is_val=True, ctype=data_type)
+            data_generator = generate_cpatches(self.batch_size, ctype=data_type)
+            val_data_generator = generate_cpatches(1, ctype=data_type)
 
             # iteration number
             it = 0
@@ -236,8 +234,7 @@ class GENGAN:
         with tf.Session() as self.sess:
             self.sess.run(tf.global_variables_initializer())
             self.saver.restore(self.sess, models_dir + self.save_name)
-            data_generator_val = generate_cpatches(self.batch_size, sample_rates=[0.5, 0.5],
-                                                   limits=['val_rand', 'val_rand'], ctype=data_type)
+            data_generator_val = generate_cpatches(self.batch_size, ctype=data_type)
             # Save some random validation samples
             for i in range(1, 6):
                 self.validate(i * 1000, data_generator_val, self.sess)
@@ -254,7 +251,7 @@ class GENGAN:
                 self.d_saver.restore(self.sess, models_dir + self.load_name)
 
             # Create patch generator
-            generator_syn = generate_cpatches(batch_size, sample_rates=sample_rates, limits=limits, ctype=data_type)
+            generator_syn = generate_cpatches(batch_size, ctype=data_type)
 
             X_train = np.zeros((num, batch_size, self.patch_size, self.patch_size, 1))
             y_train = np.zeros((num, batch_size, c_dims))

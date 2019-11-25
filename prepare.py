@@ -121,61 +121,38 @@ def generate_cpatches(nsamples, patches_path ='./patches.npz' ,ctype=None):
         counts = nsamples
         #n_samples -> n_experiments, probabity sample_rates
         X_all = None
-        for i, counts in enumerate(counts):
-            if counts> 0:
-                #load all images from each class (i)
-                X_masks = np.load(patches_path)['x_mask']
-                X_reals = np.load(patches_path)['x_real']
-                try:
-                    # get (c) images
-                    shuffle_idx = np.random.choice(len(X_masks), counts, replace=False)
-                except:
-                    pdb.set_trace()
-               
-                X_masks = X_masks[shuffle_idx]
-                X_reals = X_reals[shuffle_idx]
-                label = np.array([0,1])
-
-                y_group = np.repeat(label.reshape((1, 1, 1, -1)), counts, axis=0)
-
-                X_ = np.zeros(X_group.shape[0:-1]+(combined_dims,))
-
-                for i,X in enumerate(group):
-                    if is_val:
-                        X_mask = X[:,:,1:2]
-                        X_real = X[:,:,0:1]
-                    else:
-                        X_mask = X[:, :, 0:1]
-                        X_real = X[:, :, 1:2]
-
-                    X_mask_ = X_mask.reshape((patch_size, patch_size))
-                    X_rand = np.random.uniform(0, 255, X_mask.shape)*X_mask
-                    X_corrupt = (np.multiply(X_real, np.logical_not(X_mask).astype(int))+X_rand)
-                    
-                    X_boundary = normalize(filters.gaussian_filter(255.*np.multiply(np.invert(morph.binary_erosion(X_mask_)), X_mask_), 10.0)).reshape((patch_size, patch_size, 1))
-                    X_combined = np.concatenate((X_corrupt*1.0/255., X_mask, X_real*1.0/255., X_boundary), axis=-1)
-                    X_[i] = X_combined
-                    X_group = np.load('./patches.npz')
-                    "(for)"
-                    X_mask = X_group['x_mask'][0].reshape((patch_size, patch_size))
-                    X_real = normalize(X_group['x_real'][0].reshape((patch_size, patch_size)))
-
-                    X_rand = np.random.uniform(0, 1, X_mask.shape)*X_mask
-                    X_corrupt = (np.multiply(X_real, np.logical_not(X_mask).astype(int))+X_rand)
-                    boundary = np.multiply(np.invert(morph.binary_erosion(X_mask)), X_mask)
-                    X_boundary = normalize(filters.gaussian_filter(255.0*boundary,10)).reshape((patch_size, patch_size, 1))
-
-                    X_combined = np.concatenate((X_corrupt.reshape(patch_size, patch_size, 1), 
-                                                X_mask.reshape(patch_size, patch_size, 1),
-                                                X_real.reshape(patch_size, patch_size, 1),
-                                                X_boundary), 
-                                                axis=-1)
-                if X_all is None:
-                    X_all = X_
-                    y_all = y_group
-                else:
-                    X_all = np.concatenate((X_all, X_), axis=0)
-                    y_all = np.concatenate((y_all, y_group), axis=0)
+        #load all images from each class (i)
+        X_masks = np.load(patches_path)['x_mask']
+        X_reals = np.load(patches_path)['x_real']
+        try:
+            # get (c) images
+            shuffle_idx = np.random.choice(len(X_masks), counts, replace=False)
+        except:
+            pdb.set_trace()
         
-        shuffle_idx = np.random.choice(len(X_all), len(X_all), replace=False)
-        yield X_all[shuffle_idx], y_all[shuffle_idx]
+        #get mask and reals
+        X_masks = X_masks[shuffle_idx]
+        X_reals = X_reals[shuffle_idx]
+        label = np.array([0,1]) #always pathological
+        y_group = np.repeat(label.reshape((1, 1, 1, -1)), counts, axis=0)
+
+        X_ = []
+        for i,_ in enumerate(X_masks):
+            X_mask = X_masks[i].reshape((patch_size, patch_size))
+            X_real = normalize(X_reals[i].reshape((patch_size, patch_size)))
+
+            X_rand = np.random.uniform(0, 1, X_mask.shape)*X_mask
+            X_corrupt = (np.multiply(X_real, np.logical_not(X_mask).astype(int))+X_rand)
+            boundary = np.multiply(np.invert(morph.binary_erosion(X_mask)), X_mask)
+            X_boundary = normalize(filters.gaussian_filter(255.0*boundary,10)).reshape((patch_size, patch_size, 1))
+
+            X_combined = np.concatenate((X_corrupt.reshape(patch_size, patch_size, 1), 
+                                        X_mask.reshape(patch_size, patch_size, 1),
+                                        X_real.reshape(patch_size, patch_size, 1),
+                                        X_boundary), 
+                                        axis=-1)
+            X_.append(X_combined)
+        X_ = np.stack(X_)
+        print("Cpatches size {}".format(X_.shape))
+        shuffle_idx = np.random.choice(len(X_), len(X_), replace=False)
+        yield X_[shuffle_idx], y_group[shuffle_idx]

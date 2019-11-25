@@ -1,0 +1,99 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 5 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: './'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file './config.py'
+ outputting to './p2/config.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './model_utils.py'
+ outputting to './p2/model_utils.py'
+--------------------------------------------------------------------------------
+
+42:14: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+44:16: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+54:24: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+76:15: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+115:26: INFO: Added keywords to args of function 'tf.nn.conv2d'
+115:26: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+117:15: INFO: Added keywords to args of function 'tf.nn.avg_pool'
+117:15: INFO: Renamed keyword argument for tf.nn.avg_pool from value to input
+117:15: INFO: Renamed 'tf.nn.avg_pool' to 'tf.nn.avg_pool2d'
+129:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './train.py'
+ outputting to './p2/train.py'
+--------------------------------------------------------------------------------
+
+61:26: INFO: tf.train.exponential_decay requires manual check. To use learning rate decay schedules with TensorFlow 2.0, switch to the schedules in `tf.keras.optimizers.schedules`.
+
+61:26: INFO: Renamed 'tf.train.exponential_decay' to 'tf.compat.v1.train.exponential_decay'
+65:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+66:26: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+67:26: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+68:30: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+69:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+70:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+79:22: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+85:21: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+86:23: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+87:23: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+90:22: INFO: Added keywords to args of function 'tf.reduce_mean'
+90:37: INFO: Renamed 'tf.nn.sigmoid_cross_entropy_with_logits' to 'tf.nn.sigmoid_cross_entropy_with_logits'
+91:23: INFO: Added keywords to args of function 'tf.reduce_mean'
+91:38: INFO: Renamed 'tf.nn.sigmoid_cross_entropy_with_logits' to 'tf.nn.sigmoid_cross_entropy_with_logits'
+91:125: INFO: Added keywords to args of function 'tf.reduce_mean'
+91:140: INFO: Renamed 'tf.nn.sigmoid_cross_entropy_with_logits' to 'tf.nn.sigmoid_cross_entropy_with_logits'
+94:24: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+95:24: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+102:26: INFO: Added keywords to args of function 'tf.reduce_mean'
+105:27: INFO: Added keywords to args of function 'tf.reduce_mean'
+108:31: INFO: Added keywords to args of function 'tf.reduce_mean'
+112:27: INFO: Added keywords to args of function 'tf.reduce_mean'
+115:31: INFO: Added keywords to args of function 'tf.reduce_mean'
+118:26: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+122:23: INFO: Added keywords to args of function 'tf.reduce_mean'
+127:25: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+128:52: INFO: Added keywords to args of function 'tf.reduce_mean'
+129:31: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+134:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+135:26: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+139:37: INFO: Renamed 'tf.train.checkpoint_exists' to 'tf.compat.v1.train.checkpoint_exists'
+231:8: INFO: Renamed 'tf.reset_default_graph' to 'tf.compat.v1.reset_default_graph'
+234:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+235:26: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+243:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+245:26: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './prepare.py'
+ outputting to './p2/prepare.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './run.py'
+ outputting to './p2/run.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
