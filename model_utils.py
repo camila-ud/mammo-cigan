@@ -38,7 +38,7 @@ def build_generator(input_x, input_mask, input_c, use_c=True):
     inputs = [current_input]
 
     for _ in range(len(kernels)-1):
-        shape = int(inputs[-1].shape[1].value/2)
+        shape = int(inputs[-1].shape[1]/2)
         img = tf.image.resize(inputs[-1],(shape, shape), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
         if use_c:
             c = tf.image.resize(input_c,(shape, shape), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR) # add attributes
@@ -50,11 +50,11 @@ def build_generator(input_x, input_mask, input_c, use_c=True):
         input = inputs.pop()
         kernel = kernels[i]
         if i > 0:
-            shape = int(net.shape[1].value*2)
+            shape = int(net.shape[1]*2)
             upsampled = tf.image.resize(net, (shape, shape), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
             input = concatenate([input, upsampled], axis=-1)
 
-        shape = int(input.shape[1].value)
+        shape = int(input.shape[1])
         net = Conv2D(filters=kernel, kernel_size=(3,3), name="g_conv1_"+str(shape),
                      padding="same", activation='relu')(input)
         net = Conv2D(filters=kernel, kernel_size=(3,3), name="g_conv2_"+str(shape),
@@ -64,7 +64,7 @@ def build_generator(input_x, input_mask, input_c, use_c=True):
     net = Conv2D(filters=1, kernel_size=(1,1),
                  activation='relu', padding="same", name="g_lastconv_"+str(net.shape[1]))(net)
     print(net.shape, "g_lastconv_"+str(net.shape[1]))
-
+    print(type(net))
     return net
 
 
@@ -73,7 +73,7 @@ def build_discriminator(input_x, input_c, use_c=True):
     print("Building discriminator")
 
     def upsample(x, shape):
-        return tf.image.resize(x, (int(shape.value), int(shape.value)), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
+        return tf.image.resize(x, (int(shape), int(shape)), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
 
     weight_init = RandomNormal(mean=0., stddev=0.02)
     input_x = Input(tensor=input_x)
@@ -90,7 +90,7 @@ def build_discriminator(input_x, input_c, use_c=True):
 
     for i in range(1, 5):
         if use_c:
-            upsampled_shape = (x.shape[1].value, x.shape[1].value, c_dims)
+            upsampled_shape = (x.shape[1], x.shape[1], c_dims)
             print(upsampled_shape)
             upsampled = Lambda(upsample, arguments={'shape': x.shape[1]}, output_shape=upsampled_shape)(c)
             x = Concatenate(axis=-1)([x, upsampled])

@@ -1,0 +1,767 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 73 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: './'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file './constraints.py'
+ outputting to './p2/constraints.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './callbacks.py'
+ outputting to './p2/callbacks.py'
+--------------------------------------------------------------------------------
+
+666:20: INFO: Renamed 'tf.summary.histogram' to 'tf.compat.v1.summary.histogram'
+676:24: INFO: Renamed 'tf.summary.histogram' to 'tf.compat.v1.summary.histogram'
+682:40: INFO: Added keywords to args of function 'tf.transpose'
+692:40: INFO: Added keywords to args of function 'tf.transpose'
+709:24: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+712:20: INFO: Renamed 'tf.summary.histogram' to 'tf.compat.v1.summary.histogram'
+714:22: INFO: Renamed 'tf.summary.merge_all' to 'tf.compat.v1.summary.merge_all'
+717:26: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+720:26: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+733:25: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+800:22: INFO: Renamed 'tf.Summary' to 'tf.compat.v1.Summary'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './metrics.py'
+ outputting to './p2/metrics.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './objectives.py'
+ outputting to './p2/objectives.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './activations.py'
+ outputting to './p2/activations.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './losses.py'
+ outputting to './p2/losses.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './initializers.py'
+ outputting to './p2/initializers.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './models.py'
+ outputting to './p2/models.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './regularizers.py'
+ outputting to './p2/regularizers.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './optimizers.py'
+ outputting to './p2/optimizers.py'
+--------------------------------------------------------------------------------
+
+37:12: INFO: Added keywords to args of function 'tf.cond'
+744:34: INFO: Renamed 'tf.train.Optimizer' to 'tf.compat.v1.train.Optimizer'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './__init__.py'
+ outputting to './p2/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/vgg19.py'
+ outputting to './p2/applications/vgg19.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/inception_resnet_v2.py'
+ outputting to './p2/applications/inception_resnet_v2.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/resnet50.py'
+ outputting to './p2/applications/resnet50.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/inception_v3.py'
+ outputting to './p2/applications/inception_v3.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/mobilenet.py'
+ outputting to './p2/applications/mobilenet.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/densenet.py'
+ outputting to './p2/applications/densenet.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/imagenet_utils.py'
+ outputting to './p2/applications/imagenet_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/xception.py'
+ outputting to './p2/applications/xception.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/vgg16.py'
+ outputting to './p2/applications/vgg16.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/nasnet.py'
+ outputting to './p2/applications/nasnet.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './applications/__init__.py'
+ outputting to './p2/applications/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './legacy/interfaces.py'
+ outputting to './p2/legacy/interfaces.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './legacy/layers.py'
+ outputting to './p2/legacy/layers.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './legacy/models.py'
+ outputting to './p2/legacy/models.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './legacy/__init__.py'
+ outputting to './p2/legacy/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './datasets/cifar.py'
+ outputting to './p2/datasets/cifar.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './datasets/imdb.py'
+ outputting to './p2/datasets/imdb.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './datasets/reuters.py'
+ outputting to './p2/datasets/reuters.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './datasets/boston_housing.py'
+ outputting to './p2/datasets/boston_housing.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './datasets/mnist.py'
+ outputting to './p2/datasets/mnist.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './datasets/cifar10.py'
+ outputting to './p2/datasets/cifar10.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './datasets/fashion_mnist.py'
+ outputting to './p2/datasets/fashion_mnist.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './datasets/cifar100.py'
+ outputting to './p2/datasets/cifar100.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './datasets/__init__.py'
+ outputting to './p2/datasets/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './backend/cntk_backend.py'
+ outputting to './p2/backend/cntk_backend.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './backend/tensorflow_backend.py'
+ outputting to './p2/backend/tensorflow_backend.py'
+--------------------------------------------------------------------------------
+
+68:12: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+88:4: INFO: Renamed 'tf.reset_default_graph' to 'tf.compat.v1.reset_default_graph'
+91:12: INFO: Renamed 'tf.placeholder_with_default' to 'tf.compat.v1.placeholder_with_default'
+95:27: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+124:12: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+126:16: INFO: Renamed 'tf.placeholder_with_default' to 'tf.compat.v1.placeholder_with_default'
+146:27: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+166:7: INFO: Renamed 'tf.get_default_session' to 'tf.compat.v1.get_default_session'
+167:18: INFO: Renamed 'tf.get_default_session' to 'tf.compat.v1.get_default_session'
+171:25: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+174:25: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+176:23: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+180:24: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+189:21: INFO: Renamed 'tf.is_variable_initialized' to 'tf.compat.v1.is_variable_initialized'
+196:32: INFO: Renamed 'tf.variables_initializer' to 'tf.compat.v1.variables_initializer'
+235:8: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+298:11: INFO: Added keywords to args of function 'tf.convert_to_tensor'
+345:15: INFO: Renamed 'tf.sparse_tensor_to_dense' to 'tf.sparse.to_dense'
+502:12: INFO: Renamed 'tf.sparse_placeholder' to 'tf.compat.v1.sparse_placeholder'
+504:12: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+553:11: INFO: Added keywords to args of function 'tf.shape'
+850:12: INFO: tf.random_uniform_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 forsafety (even though they may already have been correct).
+850:12: INFO: Renamed 'tf.random_uniform_initializer' to 'tf.compat.v1.random_uniform_initializer'
+887:12: INFO: tf.random_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 forsafety (even though they may already have been correct).
+887:12: INFO: Renamed 'tf.random_normal_initializer' to 'tf.compat.v1.random_normal_initializer'
+960:11: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+973:11: INFO: Renamed 'tf.assign_add' to 'tf.compat.v1.assign_add'
+986:11: INFO: Renamed 'tf.assign_sub' to 'tf.compat.v1.assign_sub'
+1050:49: INFO: Added keywords to args of function 'tf.shape'
+1057:49: INFO: Added keywords to args of function 'tf.shape'
+1066:24: INFO: Added keywords to args of function 'tf.transpose'
+1070:14: INFO: Renamed 'tf.sparse_tensor_dense_matmul' to 'tf.sparse.sparse_dense_matmul'
+1133:37: INFO: Added keywords to args of function 'tf.shape'
+1136:37: INFO: Added keywords to args of function 'tf.shape'
+1141:18: INFO: Added keywords to args of function 'tf.reduce_sum'
+1143:18: INFO: Added keywords to args of function 'tf.reduce_sum'
+1143:44: INFO: Added keywords to args of function 'tf.transpose'
+1195:11: INFO: Added keywords to args of function 'tf.transpose'
+1228:11: INFO: Added keywords to args of function 'tf.reduce_max'
+1245:11: INFO: Added keywords to args of function 'tf.reduce_min'
+1262:11: INFO: Added keywords to args of function 'tf.reduce_sum'
+1279:11: INFO: Added keywords to args of function 'tf.reduce_prod'
+1305:11: INFO: Renamed 'tf.cumprod' to 'tf.math.cumprod'
+1324:8: INFO: Added keywords to args of function 'tf.reduce_mean'
+1326:11: INFO: Added keywords to args of function 'tf.reduce_mean'
+1364:11: INFO: Added keywords to args of function 'tf.reduce_mean'
+1379:11: INFO: Added keywords to args of function 'tf.reduce_any'
+1394:11: INFO: Added keywords to args of function 'tf.reduce_all'
+1407:11: INFO: Added keywords to args of function 'tf.argmax'
+1420:11: INFO: Added keywords to args of function 'tf.argmin'
+1483:11: INFO: Renamed 'tf.log' to 'tf.math.log'
+1504:11: INFO: Added keywords to args of function 'tf.reduce_logsumexp'
+1709:16: INFO: Added keywords to args of function 'tf.nn.moments'
+1709:16: INFO: Renamed keyword argument for tf.nn.moments from keep_dims to keepdims
+1732:16: INFO: Added keywords to args of function 'tf.nn.moments'
+1732:16: INFO: Renamed keyword argument for tf.nn.moments from keep_dims to keepdims
+1739:32: INFO: Added keywords to args of function 'tf.shape'
+1794:11: INFO: Renamed 'tf.nn.fused_batch_norm' to 'tf.compat.v1.nn.fused_batch_norm'
+1876:15: INFO: Added keywords to args of function 'tf.sparse_concat'
+1876:15: INFO: Renamed 'tf.sparse_concat' to 'tf.sparse.concat'
+1905:11: INFO: Added keywords to args of function 'tf.transpose'
+1925:20: INFO: Added keywords to args of function 'tf.shape'
+1928:12: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+1935:20: INFO: Added keywords to args of function 'tf.shape'
+1937:12: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+2005:14: INFO: Added keywords to args of function 'tf.shape'
+2071:20: INFO: Added keywords to args of function 'tf.cond'
+2163:11: INFO: Added keywords to args of function 'tf.pad'
+2197:11: INFO: Added keywords to args of function 'tf.pad'
+2248:11: INFO: Added keywords to args of function 'tf.pad'
+2339:29: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+2363:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+2404:11: INFO: Renamed 'tf.Print' to 'tf.compat.v1.Print'
+2447:39: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+2496:28: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+2512:11: INFO: tf.gradients called with colocate_gradients_with_ops argument requires manual check: tf.gradients no longer takes 'colocate_gradients_with_ops' argument, it behaves as if it was set to True.
+2512:11: INFO: Added keywords to args of function 'tf.gradients'
+2512:11: INFO: Removed argument colocate_gradients_with_ops for function tf.gradients
+2590:13: INFO: Added keywords to args of function 'tf.transpose'
+2597:15: INFO: Added keywords to args of function 'tf.transpose'
+2638:52: INFO: Added keywords to args of function 'tf.shape'
+2651:56: INFO: Added keywords to args of function 'tf.shape'
+2678:21: INFO: Added keywords to args of function 'tf.shape'
+2730:52: INFO: Added keywords to args of function 'tf.shape'
+2773:14: INFO: Added keywords to args of function 'tf.transpose'
+2809:12: INFO: Added keywords to args of function 'tf.cond'
+2829:36: INFO: Added keywords to args of function 'tf.shape'
+2831:25: INFO: Added keywords to args of function 'tf.shape'
+2999:18: INFO: Added keywords to args of function 'tf.reduce_sum'
+3005:17: INFO: Added keywords to args of function 'tf.reduce_sum'
+3005:40: INFO: Renamed 'tf.log' to 'tf.math.log'
+3008:15: INFO: Changing labels arg of tf.nn.softmax_cross_entropy_with_logits to tf.stop_gradient(labels). Please check this transformation.
+
+3031:17: INFO: Renamed 'tf.log' to 'tf.math.log'
+3042:31: INFO: Added keywords to args of function 'tf.shape'
+3066:17: INFO: Renamed 'tf.log' to 'tf.math.log'
+3068:11: INFO: Renamed 'tf.nn.sigmoid_cross_entropy_with_logits' to 'tf.nn.sigmoid_cross_entropy_with_logits'
+3135:11: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+3148:11: INFO: Renamed keyword argument for tf.nn.l2_normalize from dim to axis
+3164:11: INFO: Added keywords to args of function 'tf.nn.in_top_k'
+3185:16: INFO: Added keywords to args of function 'tf.transpose'
+3206:16: INFO: Added keywords to args of function 'tf.transpose'
+3227:16: INFO: Added keywords to args of function 'tf.transpose'
+3288:8: INFO: Renamed keyword argument for tf.nn.convolution from filter to filters
+3288:8: INFO: Renamed keyword argument for tf.nn.convolution from dilation_rate to dilations
+3326:8: INFO: Renamed keyword argument for tf.nn.convolution from filter to filters
+3326:8: INFO: Renamed keyword argument for tf.nn.convolution from dilation_rate to dilations
+3335:12: INFO: Added keywords to args of function 'tf.transpose'
+3374:24: INFO: Added keywords to args of function 'tf.shape'
+3387:12: INFO: Added keywords to args of function 'tf.transpose'
+3428:8: INFO: Added keywords to args of function 'tf.nn.separable_conv2d'
+3428:8: INFO: Renamed keyword argument for tf.nn.separable_conv2d from rate to dilations
+3437:12: INFO: Added keywords to args of function 'tf.transpose'
+3474:8: INFO: Added keywords to args of function 'tf.nn.separable_conv2d'
+3474:8: INFO: Renamed keyword argument for tf.nn.separable_conv2d from rate to dilations
+3480:12: INFO: Added keywords to args of function 'tf.transpose'
+3515:8: INFO: Added keywords to args of function 'tf.nn.depthwise_conv2d'
+3515:8: INFO: Renamed keyword argument for tf.nn.depthwise_conv2d from rate to dilations
+3521:12: INFO: Added keywords to args of function 'tf.transpose'
+3552:8: INFO: Renamed keyword argument for tf.nn.convolution from filter to filters
+3552:8: INFO: Renamed keyword argument for tf.nn.convolution from dilation_rate to dilations
+3560:12: INFO: Added keywords to args of function 'tf.transpose'
+3600:24: INFO: Added keywords to args of function 'tf.shape'
+3613:12: INFO: Added keywords to args of function 'tf.transpose'
+3652:12: INFO: Added keywords to args of function 'tf.nn.max_pool'
+3652:12: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+3652:12: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+3656:12: INFO: Added keywords to args of function 'tf.nn.avg_pool'
+3656:12: INFO: Renamed keyword argument for tf.nn.avg_pool from value to input
+3656:12: INFO: Renamed 'tf.nn.avg_pool' to 'tf.nn.avg_pool2d'
+3663:12: INFO: Added keywords to args of function 'tf.transpose'
+3712:12: INFO: Added keywords to args of function 'tf.transpose'
+3805:11: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+3828:11: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+3848:20: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+3875:11: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+3895:18: INFO: Added keywords to args of function 'tf.shape'
+3910:16: INFO: Added keywords to args of function 'tf.boolean_mask'
+3912:18: INFO: Added keywords to args of function 'tf.transpose'
+3914:16: INFO: Added keywords to args of function 'tf.boolean_mask'
+3915:14: INFO: Added keywords to args of function 'tf.transpose'
+3919:27: INFO: Changed tf.to_int64 call to tf.cast(..., dtype=tf.int64).
+3919:62: INFO: Changed tf.to_int64 call to tf.cast(..., dtype=tf.int64).
+3939:19: INFO: Changed tf.to_int32 call to tf.cast(..., dtype=tf.int32).
+3940:19: INFO: Changed tf.to_int32 call to tf.cast(..., dtype=tf.int32).
+3941:20: INFO: Changed tf.to_int32 call to tf.cast(..., dtype=tf.int32).
+3943:13: INFO: Renamed 'tf.log' to 'tf.math.log'
+3943:20: INFO: Added keywords to args of function 'tf.transpose'
+3979:13: INFO: Renamed 'tf.log' to 'tf.math.log'
+3979:20: INFO: Added keywords to args of function 'tf.transpose'
+3980:19: INFO: Changed tf.to_int32 call to tf.cast(..., dtype=tf.int32).
+3992:21: INFO: Renamed 'tf.sparse_to_dense' to 'tf.compat.v1.sparse_to_dense'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './backend/theano_backend.py'
+ outputting to './p2/backend/theano_backend.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './backend/common.py'
+ outputting to './p2/backend/common.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './backend/__init__.py'
+ outputting to './p2/backend/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/io_utils.py'
+ outputting to './p2/utils/io_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/test_utils.py'
+ outputting to './p2/utils/test_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/training_utils.py'
+ outputting to './p2/utils/training_utils.py'
+--------------------------------------------------------------------------------
+
+135:16: INFO: Added keywords to args of function 'tf.shape'
+156:17: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+156:17: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/generic_utils.py'
+ outputting to './p2/utils/generic_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/conv_utils.py'
+ outputting to './p2/utils/conv_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/data_utils.py'
+ outputting to './p2/utils/data_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/layer_utils.py'
+ outputting to './p2/utils/layer_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/vis_utils.py'
+ outputting to './p2/utils/vis_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/np_utils.py'
+ outputting to './p2/utils/np_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './utils/__init__.py'
+ outputting to './p2/utils/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './preprocessing/image.py'
+ outputting to './p2/preprocessing/image.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './preprocessing/sequence.py'
+ outputting to './p2/preprocessing/sequence.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './preprocessing/text.py'
+ outputting to './p2/preprocessing/text.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './preprocessing/__init__.py'
+ outputting to './p2/preprocessing/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/pooling.py'
+ outputting to './p2/layers/pooling.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/core.py'
+ outputting to './p2/layers/core.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/normalization.py'
+ outputting to './p2/layers/normalization.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/convolutional_recurrent.py'
+ outputting to './p2/layers/convolutional_recurrent.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/convolutional.py'
+ outputting to './p2/layers/convolutional.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/recurrent.py'
+ outputting to './p2/layers/recurrent.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/embeddings.py'
+ outputting to './p2/layers/embeddings.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/wrappers.py'
+ outputting to './p2/layers/wrappers.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/local.py'
+ outputting to './p2/layers/local.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/advanced_activations.py'
+ outputting to './p2/layers/advanced_activations.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/cudnn_recurrent.py'
+ outputting to './p2/layers/cudnn_recurrent.py'
+--------------------------------------------------------------------------------
+
+271:17: INFO: Added keywords to args of function 'tf.transpose'
+302:21: INFO: Added keywords to args of function 'tf.transpose'
+477:17: INFO: Added keywords to args of function 'tf.transpose'
+516:21: INFO: Added keywords to args of function 'tf.transpose'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/noise.py'
+ outputting to './p2/layers/noise.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/merge.py'
+ outputting to './p2/layers/merge.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './layers/__init__.py'
+ outputting to './p2/layers/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './engine/training.py'
+ outputting to './p2/engine/training.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './engine/topology.py'
+ outputting to './p2/engine/topology.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './engine/__init__.py'
+ outputting to './p2/engine/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './wrappers/scikit_learn.py'
+ outputting to './p2/wrappers/scikit_learn.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file './wrappers/__init__.py'
+ outputting to './p2/wrappers/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+

@@ -16,8 +16,7 @@ from time import gmtime, strftime
 from sys import argv
 import hickle as hkl
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
-
+tf.compat.v1.disable_eager_execution()
 class GENGAN:
 
     def __init__(self, save_name, load_name, patch_size, num_iterations,
@@ -55,7 +54,7 @@ class GENGAN:
 
     def build_model(self):
         print('Building model')
-
+        
         # Learning rate params
         self.global_step = tf.Variable(0, trainable=False)
         self.learn_rate = tf.compat.v1.train.exponential_decay(learn_rate, self.global_step,
@@ -70,6 +69,7 @@ class GENGAN:
         self.input_z = tf.compat.v1.placeholder(tf.float32, [None, 1, 1, z_dims])
         self.fake_image = build_generator(self.input_x, self.input_mask, self.input_c, use_c=self.use_c)
 
+        #
         # Build discriminator
         self.discriminator = build_discriminator(input_x=self.input_x, input_c=self.input_c, use_c=self.use_c)
         D_real, self.D_real_attr = self.discriminator([self.input_real, self.input_c])
@@ -158,7 +158,7 @@ class GENGAN:
             # iteration number
             it = 0
             # number of VGG loss pre-training iterations
-            vgg_iters = 100
+            vgg_iters = 10
             # Number of iterations per epoch for each type of loss
             d_iters = 5
             g_iters = 1
@@ -175,7 +175,7 @@ class GENGAN:
                 print('Pre-training on VGG')
                 for i in range(vgg_iters):
                     print('Iteration', i)
-                    VGG_loss_cur = self.train(self.sess, self.VGG_solver, self.G_loss_vgg, generator=data_generator, iters=100)
+                    VGG_loss_cur = self.train(self.sess, self.VGG_solver, self.G_loss_vgg, generator=data_generator, iters=5)
                     print('VGG loss', VGG_loss_cur)
                     self.validate(i, val_data_generator, self.sess)
                     save(self.save_name + '_vgg', it, self.g_saver, self.sess)
