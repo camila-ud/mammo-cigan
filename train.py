@@ -158,7 +158,7 @@ class GENGAN:
             # iteration number
             it = 0
             # number of VGG loss pre-training iterations
-            vgg_iters = 10
+            vgg_iters = 100
             # Number of iterations per epoch for each type of loss
             d_iters = 5
             g_iters = 1
