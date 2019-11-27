@@ -153,6 +153,6 @@ def generate_cpatches(nsamples, patches_path ='./patches.npz' ,ctype=None):
                                         axis=-1)
             X_.append(X_combined)
         X_ = np.stack(X_)
-        print("Cpatches size {}".format(X_.shape))
+        print("Patches size {},{}".format(X_.shape,y_group.shape))
         shuffle_idx = np.random.choice(len(X_), len(X_), replace=False)
         yield X_[shuffle_idx], y_group[shuffle_idx]

@@ -20,7 +20,8 @@ tf.compat.v1.disable_eager_execution()
 class GENGAN:
 
     def __init__(self, save_name, load_name, patch_size, num_iterations,
-                 batch_size, new_model, sample_rates, ckpt_num, train_vgg, load_vgg, load_weights, limits):
+                 batch_size, new_model, sample_rates, ckpt_num, train_vgg, load_vgg, 
+                 load_weights, limits,use_c):
         self.sess = None
         self.save_name = save_name
         self.patch_size = patch_size
@@ -30,7 +31,7 @@ class GENGAN:
         self.batch_size = batch_size
         self.new_model = new_model
         self.sample_rates = sample_rates
-        self.use_c = True
+        self.use_c = use_c
         self.ckpt_num = ckpt_num
         self.train_vgg = train_vgg
         self.load_vgg = load_vgg
@@ -315,7 +316,7 @@ class GENGAN:
         data_real = data_X[0:1, :, :, 2:3]
         mask_image = data_mask[0, :, :, 0]
         real_image = data_real[0, :, :, 0]
-        # Get non-cancer sample
+        """ # Get non-cancer sample
         data_c = np.reshape(np.array([1, 0]), (1, 1, 1, c_dims))
         data_z = np.random.random_sample((1, 1, 1, z_dims))
         output_ben_mass = sess.run(self.fake_image, feed_dict={
@@ -323,9 +324,9 @@ class GENGAN:
             self.input_mask: data_mask,
             self.input_c: data_c,
             self.input_z: data_z
-           })
+           }) """
         # Get cancer sample
-        data_c = np.reshape(np.array([0, 1]), (1, 1, 1, c_dims))
+        data_c = np.reshape(np.array([0,1]), (1, 1, 1, c_dims))
         data_z = np.random.random_sample((1, 1, 1, z_dims))
         output_mal_mass = sess.run(self.fake_image, feed_dict={
             self.input_x: data_x,
@@ -333,13 +334,12 @@ class GENGAN:
             self.input_c: data_c,
             self.input_z: data_z
            })
-        output_ben_mass = output_ben_mass[0, :, :, 0]
+        #output_ben_mass = output_ben_mass[0, :, :, 0]
         output_mal_mass = output_mal_mass[0, :, :, 0]
-        img = np.concatenate((real_image, mask_image, output_ben_mass, output_mal_mass), axis=1)
+        img = np.concatenate((real_image, mask_image, output_mal_mass), axis=1)
         img = scipy.ndimage.zoom(img, zoom=[0.75, 0.75])
         directory = './validation/' + self.save_name + '/'
         if not os.path.exists(directory):
             os.makedirs(directory)
-        print(np.unique(output_ben_mass))
         print(np.unique(output_mal_mass))
         scipy.misc.toimage(img, cmin=0.0, cmax=1.0).save(directory + self.save_name + '_' + str(self.patch_size) + '_' + str(i) + '.png')

@@ -43,7 +43,7 @@ if __name__ == '__main__':
         GAN = GENGAN(save_name, load_name, patch_size, epochs,
                      batch_size, new_model, sample_rates=sample_rates,
                      ckpt_num=None, train_vgg=train_vgg, load_vgg=load_vgg,
-                     load_weights=load_weights, limits=limits)
+                     load_weights=load_weights, limits=limits,use_c=True)
 
         GAN.build_model()
         GAN.train_model()
