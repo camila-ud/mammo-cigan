@@ -274,6 +274,43 @@ class GENGAN:
             X_train = X_train.reshape((-1, self.patch_size, self.patch_size, 1))
             y_train = y_train.reshape((-1, c_dims))
             return X_train, y_train
+    
+    def synthesize_image(self, num, batch_size=batch_size, limits=[None]*c_dims, sample_rates = [0.5, 0.5]):
+        with tf.compat.v1.Session() as self.sess:
+            # Load model
+            self.sess.run(tf.compat.v1.global_variables_initializer())
+            if self.ckpt_num is not None:
+                self.g_saver.restore(self.sess, checkpoints_dir + self.load_name+'_'+str(self.ckpt_num))
+                self.d_saver.restore(self.sess, checkpoints_dir + self.load_name+'_'+str(self.ckpt_num))
+            else:
+                self.g_saver.restore(self.sess, models_dir + self.load_name)
+                self.d_saver.restore(self.sess, models_dir + self.load_name)
+
+            # Create patch generator
+            generator_syn = generate_cpatches(batch_size, ctype=data_type)
+
+            X_train = np.zeros((num, batch_size, self.patch_size, self.patch_size, 1))
+            y_train = np.zeros((num, batch_size, c_dims))
+            for i in range(0, num):
+                print('Num ', i)
+                data_X, data_c = next(generator_syn)
+
+                # Use normals to generate malignant, and vice versa
+                data_c[:, :, :, 0] = 1-data_c[:, :, :, 0]
+                data_c[:, :, :, 1] = 1-data_c[:, :, :, 1]
+                data_x = data_X[:, :, :, 0:1]
+                data_mask = data_X[:, :, :, 1:2]
+                pred_img = self.sess.run(self.fake_image, feed_dict={
+                    self.input_x: data_x,
+                    self.input_mask: data_mask,
+                    self.input_c: data_c
+                   })
+                X_train[i] = pred_img
+                y_train[i] = data_c.reshape((-1, c_dims))
+
+            X_train = X_train.reshape((-1, self.patch_size, self.patch_size, 1))
+            y_train = y_train.reshape((-1, c_dims))
+            return X_train, y_train
 
     def train(self, sess, solver, loss, generator, step=0, iters=10, return_acc=False):
         loss_avg = []
