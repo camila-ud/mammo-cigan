@@ -29,8 +29,8 @@ if __name__ == '__main__':
             # do not save new model
             new_model = False 
             limits = [None, None, None]
-            # ckpt_num = sys.argv[2]
-            # print("loading",ckpt_num)
+            test_id = sys.argv[2]
+            print("sin",test_id)
             # instantiate GAN model
             GAN = GENGAN(save_name, load_name, patch_size, learn_rate, epochs,
                         batch_size, new_model,train_vgg=False, load_vgg=False, 
@@ -38,7 +38,7 @@ if __name__ == '__main__':
                
 
             GAN.build_model()
-            GAN.synthesis()
+            GAN.synthesis(test_id)
     else:
         # pretrain with VGG
         train_vgg = True

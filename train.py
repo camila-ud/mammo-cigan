@@ -242,7 +242,7 @@ class GENGAN:
 
             self.validate(1, generator_syn, self.sess)
     
-    def synthesis(self):
+    def synthesis(self,i):
         with tf.compat.v1.Session() as self.sess:
             self.sess.run(tf.compat.v1.global_variables_initializer())
             if self.ckpt_num is not None:
@@ -251,16 +251,16 @@ class GENGAN:
             else:
                 self.g_saver.restore(self.sess, models_dir + self.load_name)
                 self.d_saver.restore(self.sess, models_dir + self.load_name)
-            generator_syn = generate_nc_patches(self.batch_size, ctype=data_type)
+            
+            generator_syn = generate_nc_patches(batch_size, ctype=data_type)
             
             data_X, data_c = next(generator_syn)
-            print(data_X.shape,data_c.shape)
             data_x = data_X[0:1, :, :, 0:1]
             data_mask = data_X[0:1, :, :, 1:2]
             data_real = data_X[0:1, :, :, 2:3]
             input_image = data_x[0, :, :, 0]
             real_image = data_real[0, :, :, 0]
-
+            data_c = np.reshape(np.array([0,1]), (1, 1, 1, c_dims))
             pred_img = self.sess.run(self.fake_image, feed_dict={
                     self.input_x: data_x,
                     self.input_mask: data_mask,
