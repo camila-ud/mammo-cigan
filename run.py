@@ -25,6 +25,20 @@ if __name__ == '__main__':
 
         GAN.build_model()
         GAN.validate_model()
+    elif '--syn' in sys.argv:
+            # do not save new model
+            new_model = False 
+            limits = [None, None, None]
+            # ckpt_num = sys.argv[2]
+            # print("loading",ckpt_num)
+            # instantiate GAN model
+            GAN = GENGAN(save_name, load_name, patch_size, learn_rate, epochs,
+                        batch_size, new_model,train_vgg=False, load_vgg=False, 
+                load_weights=False, limits=limits,use_c=True,ckpt_num=None)
+               
+
+            GAN.build_model()
+            GAN.synthesis()
     else:
         # pretrain with VGG
         train_vgg = True
