@@ -232,11 +232,38 @@ class GENGAN:
     def validate_model(self):
         with tf.compat.v1.Session() as self.sess:
             self.sess.run(tf.compat.v1.global_variables_initializer())
-            self.saver.restore(self.sess, models_dir + self.save_name)
-            data_generator_val = generate_cpatches(self.batch_size, ctype=data_type)
+            if self.ckpt_num is not None:
+                self.g_saver.restore(self.sess, checkpoints_dir + self.load_name+'_'+str(self.ckpt_num))
+                self.d_saver.restore(self.sess, checkpoints_dir + self.load_name+'_'+str(self.ckpt_num))
+            else:
+                self.g_saver.restore(self.sess, models_dir + self.load_name)
+                self.d_saver.restore(self.sess, models_dir + self.load_name)
+            generator_syn =  generate_cpatches(batch_size, ctype=data_type)
 
-            # Save some random validation samples
-            self.validate(1,data_generator_val, self.sess)
+            self.validate(1, generator_syn, self.sess)
+        #     generator_syn = generate_nc_patches(self.batch_size, ctype=data_type)
+            
+        #     data_X, data_c = next(generator_syn)
+        #     data_x = data_X[0:1, :, :, 0:1]
+        #     data_mask = data_X[0:1, :, :, 1:2]
+        #     data_real = data_X[0:1, :, :, 2:3]
+        #     input_image = data_x[0, :, :, 0]
+        #     real_image = data_real[0, :, :, 0]
+
+        #     pred_img = self.sess.run(self.fake_image, feed_dict={
+        #             self.input_x: data_x,
+        #             self.input_mask: data_mask,
+        #             self.input_c: data_c
+        #            })
+        #     pred_img = pred_img[0, :, :, 0]
+        #     img = np.concatenate((real_image,input_image, pred_img), axis=1)
+        #     img = scipy.ndimage.zoom(img, zoom=[0.75, 0.75])
+        #     directory = './synthesis/' + self.save_name + '/'
+        #     if not os.path.exists(directory):
+        #         os.makedirs(directory)
+        #     print(np.unique(pred_img))
+        #     scipy.misc.toimage(img, cmin=0.0, cmax=1.0).save(directory + self.save_name + '_' + str(self.patch_size) + '_' + str(i) + '.png')
+        # tf.compat.v1.reset_default_graph()
 
     def synthesize_dataset(self, num, batch_size=batch_size, limits=[None]*c_dims, sample_rates = [0.5, 0.5]):
         with tf.compat.v1.Session() as self.sess:
@@ -250,7 +277,7 @@ class GENGAN:
                 self.d_saver.restore(self.sess, models_dir + self.load_name)
 
             # Create patch generator
-            generator_syn = generate_cpatches(batch_size, ctype=data_type)
+            generator_syn = generate_nc_patches(batch_size, ctype=data_type)
 
             X_train = np.zeros((num, batch_size, self.patch_size, self.patch_size, 1))
             y_train = np.zeros((num, batch_size, c_dims))
@@ -259,8 +286,6 @@ class GENGAN:
                 data_X, data_c = next(generator_syn)
 
                 # Use normals to generate malignant, and vice versa
-                data_c[:, :, :, 0] = 1-data_c[:, :, :, 0]
-                data_c[:, :, :, 1] = 1-data_c[:, :, :, 1]
                 data_x = data_X[:, :, :, 0:1]
                 data_mask = data_X[:, :, :, 1:2]
                 pred_img = self.sess.run(self.fake_image, feed_dict={
@@ -275,7 +300,8 @@ class GENGAN:
             y_train = y_train.reshape((-1, c_dims))
             return X_train, y_train
     
-    def synthesize_image(self, num, batch_size=batch_size, limits=[None]*c_dims, sample_rates = [0.5, 0.5]):
+    def synthesize_image(self, num):
+        tf.compat.v1.reset_default_graph()
         with tf.compat.v1.Session() as self.sess:
             # Load model
             self.sess.run(tf.compat.v1.global_variables_initializer())
