@@ -276,6 +276,7 @@ class GENGAN:
             scipy.misc.toimage(img, cmin=0.0, cmax=1.0).save(directory + self.save_name + '_' + str(self.patch_size) + '_' + str(i) + '.png')
 
     def synthesize_dataset(self, num, batch_size=batch_size, limits=[None]*c_dims, sample_rates = [0.5, 0.5]):
+        num = int(num)
         with tf.compat.v1.Session() as self.sess:
             # Load model
             self.sess.run(tf.compat.v1.global_variables_initializer())
@@ -290,7 +291,7 @@ class GENGAN:
             generator_syn = generate_nc_patches(batch_size, ctype=data_type)
 
             X_train = np.zeros((num, batch_size, self.patch_size, self.patch_size, 1))
-            y_train = np.zeros((num, batch_size, c_dims))
+            X_train = np.zeros((num, batch_size, self.patch_size, self.patch_size, 1))
             for i in range(0, num):
                 print('Num ', i)
                 data_X, data_c = next(generator_syn)
@@ -307,8 +308,8 @@ class GENGAN:
                 y_train[i] = data_c.reshape((-1, c_dims))
 
             X_train = X_train.reshape((-1, self.patch_size, self.patch_size, 1))
-            y_train = y_train.reshape((-1, c_dims))
-            return X_train, y_train
+            np.savez_compressed('./samples_sinthesizes', samples = X_train)
+            print("samples_generated")
 
     def train(self, sess, solver, loss, generator, step=0, iters=10, return_acc=False):
         loss_avg = []

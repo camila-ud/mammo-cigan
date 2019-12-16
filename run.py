@@ -39,6 +39,20 @@ if __name__ == '__main__':
 
             GAN.build_model()
             GAN.synthesis(test_id)
+    elif '--convert' in sys.argv:
+            # do not save new model
+            new_model = False 
+            limits = [None, None, None]
+            test_id = sys.argv[2]
+            print("No",test_id)
+            # instantiate GAN model
+            GAN = GENGAN(save_name, load_name, patch_size, learn_rate, epochs,
+                        batch_size, new_model,train_vgg=False, load_vgg=False, 
+                load_weights=False, limits=limits,use_c=True,ckpt_num=None)
+               
+
+            GAN.build_model()
+            GAN.synthesize_dataset(test_id)
     else:
         # pretrain with VGG
         train_vgg = True
