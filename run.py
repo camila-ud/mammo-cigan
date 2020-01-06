@@ -3,9 +3,9 @@ from config import *
 
 if __name__ == '__main__':
     # model name to load?
-    load_name = 'model_name'
+    load_name = 'model_name_sou'
     # new model save name
-    save_name = 'model_name'
+    save_name = 'model_name_sou'
 
     # checkpoint number to load?
     ckpt_num = None
