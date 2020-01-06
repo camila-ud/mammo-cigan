@@ -155,7 +155,6 @@ class GENGAN:
             print('Getting dataset')
             data_generator = generate_cpatches(self.batch_size, ctype=data_type)
             val_data_generator = generate_cpatches(1, ctype=data_type)
-
             # iteration number
             it = 0
             # number of VGG loss pre-training iterations (orig 100)
@@ -199,7 +198,6 @@ class GENGAN:
                         print('G loss', G_loss_cur)
                         it += g_iters
                         G_timer += 1
-
                     print('========')
 
                 # VGG LOSS
@@ -215,6 +213,12 @@ class GENGAN:
                     boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('Boundary loss', boundary_loss_cur)
+		#L1 LOSS
+
+                for i in range(1):
+                    L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=5)
+                    it += boundary_iters
+                    print('L1 loss', L1_loss_cur)
 
                 # Save model some of the time
                 if np.random.random() > 0.25:
@@ -227,6 +231,7 @@ class GENGAN:
 
             print('Saving model')
             save(self.save_name, it, self.saver, self.sess)
+            #np.savez_compressed('data_loss',d=d_,v=v_,g=g_)
         tf.compat.v1.reset_default_graph()
 
     def validate_model(self):

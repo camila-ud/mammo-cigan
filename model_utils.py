@@ -1,6 +1,6 @@
 from config import *
 from prepare import *
-import keras
+#import keras
 from keras.models import Model, model_from_json, load_model
 from keras.layers import Activation, Flatten, Input, Dense, Add
 from keras.layers import Conv2D, MaxPooling2D, UpSampling2D, merge, Dropout, ZeroPadding2D, Lambda, Concatenate, Reshape
@@ -38,7 +38,7 @@ def build_generator(input_x, input_mask, input_c, use_c=True):
     inputs = [current_input]
 
     for _ in range(len(kernels)-1):
-        shape = int(inputs[-1].shape[1]/2)
+        shape = int(inputs[-1].shape[1]//2)
         img = tf.image.resize(inputs[-1],(shape, shape), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
         if use_c:
             c = tf.image.resize(input_c,(shape, shape), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR) # add attributes
