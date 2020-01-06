@@ -1,0 +1,1024 @@
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.30188614
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.2782978
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 2.675257
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.2589939
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.23958834
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 99.136215
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 7.637702
+Saving model
+Saved  model_name
+Validating 1784
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.04656138 0.04696427 0.04710265 ... 0.8442537  0.845108   0.8457952 ]
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.18805666
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 2.0797079
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.1079017
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.07992445
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 105.23441
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.6500344
+Saving model
+Saved  model_name
+Validating 1813
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.         0.00714739 0.00798324 ... 0.83839333 0.8440422  0.8468428 ]
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3403336
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.39230877
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.40362206
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.1653469
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 2.9847097
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 3.164094
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.0449375
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.13085686
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 94.63274
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.0607224
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.256923
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 2.6230474
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 2.227767
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.061212573
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 96.09624
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.8639364
+Saving model
+Saved  model_name
+Validating 1887
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.01084869 0.01104506 0.01159382 ... 0.92442596 0.9305837  0.9309548 ]
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.37247315
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.6240581
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.4309152
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.42061448
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.26878634
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.4771345
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.082181
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.63334334
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.0024207246
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 100.788994
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.664712
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.22152083
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 2.4541903
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.5013825
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.3958786
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.074917875
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 96.8141
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.0132
+Saving model
+Saved  model_name
+Validating 1967
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.02360359 0.02374637 0.0257715  ... 0.83353215 0.83356315 0.8481862 ]
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.608913
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3635364
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.33536035
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.28132218
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.3793712
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.0388525
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.7729449
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.011480499
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 92.19483
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.1111236
+Saving model
+Saved  model_name
+Validating 2012
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.01951015 0.02314067 0.02375065 ... 0.8662186  0.8688231  0.86957955]
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3670693
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.35122767
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.319467
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.27041158
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 2.2297971
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.7658402
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.4183384
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.47233546
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.19961785
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 96.68401
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.673663
+Saving model
+Saved  model_name
+Validating 2058
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.01241326 0.01253569 0.01333794 ... 0.971125   0.97491646 0.9778414 ]
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.29816365
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 3.108818
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.774268
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.90535486
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.58351606
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.32193822
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.0048212875
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 94.02347
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.7195253
+Saving model
+Saved  model_name
+Validating 2090
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.02009218 0.02343768 0.02496477 ... 0.9443964  0.9450705  0.9455184 ]
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.5199493
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.58700705
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.46361953
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.4813513
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.41844743
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.5320532
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.6276702
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.34698358
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.5523922
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.5784098
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.44225454
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3342967
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3381123
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.44710836
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3562519
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.50935686
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.38179466
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3968967
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.41241655
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.41547346
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.40228024
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.35167292
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.38872647
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.4164303
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3358509
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.36476776
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.39813024
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.35331982
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.4027856
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.31790957
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.34810543
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.38858062
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3052674
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.24552365
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 3.322834
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 2.4854808
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.0500102
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.7426778
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.69520646
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.17830321
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 100.73912
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 7.300391
+Saving model
+Saved  model_name
+Validating 2287
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.00957018 0.00968861 0.01031819 ... 0.94662863 0.95612407 0.95675236]
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.44051152
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3657144
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.34714207
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.43012315
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.4162608
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.53065354
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.47143096
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.39560232
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3914455
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.32252136
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.43352157
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3071165
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.35096478
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3996485
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.4084347
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3833057
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.28111738
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.4755385
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.9431956
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.0830145
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.34357315
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.37255257
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.122213796
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 88.48607
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.1401887
+Saving model
+Saved  model_name
+Validating 2399
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.0000000e+00 1.2905337e-05 5.8435835e-05 ... 1.0256006e+00 1.0367550e+00
+ 1.0385399e+00]
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.49916998
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.4458162
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.53471345
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.56303346
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.45622367
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.41286606
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.43673524
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.49347132
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.48558536
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.43566027
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.5757182
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.47871083
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.35408002
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.42194718
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3865921
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.41844934
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.52535796
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.4325592
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.45771638
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.41385093
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.3050406
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+D_loss 0.2595701
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.8594512
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 1.9437082
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.9355141
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.62336236
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.6587261
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+G loss 0.14436397
+========
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+VGG loss 99.38948
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Patches size (8, 256, 256, 4),(8, 1, 1, 2)
+Boundary loss 6.158631
+Saving model
+Saved  model_name
+Validating 2536
+Patches size (1, 256, 256, 4),(1, 1, 1, 2)
+[0.0701864  0.07131807 0.07202379 ... 0.81024045 0.81700045 0.8172948 ]
+Saving model
+Saved  model_name
+(jupyter) camila@camila:~/Documents/TAF HEALTH/S5/mammo-cigan$ 
