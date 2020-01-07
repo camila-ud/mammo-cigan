@@ -159,7 +159,7 @@ class GENGAN:
             # iteration number
             it = 0
             # number of VGG loss pre-training iterations
-            vgg_iters = 100
+            vgg_iters = 10
             # Number of iterations per epoch for each type of loss
             d_iters = 5
             g_iters = 1
@@ -169,14 +169,14 @@ class GENGAN:
             # Alternatively, train the D or G until loss drops below threshold
             D_loss_threshold = 0.3
             G_loss_threshold = 0.3
-
+            v_= g_ = d_ = b_ = l_ = [] #history
             print('Training model')
             # First train on VGG loss only
             if self.train_vgg:
                 print('Pre-training on VGG')
                 for i in range(vgg_iters):
                     print('Iteration', i,vgg_iters)
-                    VGG_loss_cur = self.train(self.sess, self.VGG_solver, self.G_loss_vgg, generator=data_generator, iters=10)
+                    VGG_loss_cur = self.train(self.sess, self.VGG_solver, self.G_loss_vgg, generator=data_generator, iters=100)
                     print('VGG loss', VGG_loss_cur)
                     self.validate(i, val_data_generator, self.sess)
                     save(self.save_name + '_vgg', it, self.g_saver, self.sess)
@@ -192,6 +192,7 @@ class GENGAN:
                         print('D_loss', D_loss_cur)
                         it += d_iters
                         D_timer += 1
+			d_.append(D_loss_cur)
 
                     print('========')
                     G_timer = 0
@@ -201,6 +202,7 @@ class GENGAN:
                         print('G loss', G_loss_cur)
                         it += g_iters
                         G_timer += 1
+			g_.append(G_loss_cur)
 
                     print('========')
 
@@ -210,6 +212,7 @@ class GENGAN:
                     VGG_loss_cur = self.train(self.sess, self.VGG_solver, self.G_loss_vgg, generator=data_generator, iters=vgg_iters)
                     it += vgg_iters
                     print('VGG loss', VGG_loss_cur)
+                    v_.append(VGG_loss_cur)
 
                 # BOUNDARY LOSS
 
@@ -217,22 +220,25 @@ class GENGAN:
                     boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('Boundary loss', boundary_loss_cur)
+                    b_.append(boundaty_loss_cur)
                 #L1 LOSS
                 for i in range(1):
                     L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('L1 loss', L1_loss_cur)
+		    l_.append(L1_loss_cur)
                 # Save model some of the time
-                if np.random.random() > 0.25:
-                    print('Saving model')
-                    ckpt = np.random.random() > 0.9
-                    if ckpt:
-                        print('Saving checkpoint')
-                    save(self.save_name, it, self.saver, self.sess, ckpt=ckpt)
-                    self.validate(it, val_data_generator, self.sess)
+                #if np.random.random() > 0.25:
+                 #   print('Saving model')
+                  #  ckpt = np.random.random() > 0.9
+                   # if ckpt:
+                   #     print('Saving checkpoint')
+                   # save(self.save_name, it, self.saver, self.sess, ckpt=ckpt)
+                self.validate(it, val_data_generator, self.sess)
 
             print('Saving model')
             save(self.save_name, it, self.saver, self.sess)
+            np.savez_compressed('loss',d = d_,g = g_,b = b_,l = l_,v = v_)
         tf.reset_default_graph()
 
     def validate_model(self):
