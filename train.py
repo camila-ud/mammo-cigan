@@ -190,7 +190,7 @@ class GENGAN:
                         print('D_loss', D_loss_cur)
                         it += d_iters
                         D_timer += 1
-			            d_.append(D_loss_cur)
+                        d_.append(D_loss_cur)
 
                     print('========')
                     G_timer = 0
@@ -200,7 +200,7 @@ class GENGAN:
                         print('G loss', G_loss_cur)
                         it += g_iters
                         G_timer += 1
-			            g_.append(G_loss_cur)
+                        g_.append(G_loss_cur)
 
                     print('========')
 
@@ -224,7 +224,7 @@ class GENGAN:
                     L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('L1 loss', L1_loss_cur)
-		            l_.append(L1_loss_cur)
+                    l_.append(L1_loss_cur)
                 # Save model some of the time
                 #if np.random.random() > 0.25:
                  #   print('Saving model')
