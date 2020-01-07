@@ -167,7 +167,11 @@ class GENGAN:
             # Alternatively, train the D or G until loss drops below threshold
             D_loss_threshold = 0.3
             G_loss_threshold = 0.3
-            v_= g_ = d_ = b_ = l_ = [] #history
+            #history -------
+            vgg_data = []
+            l1_data = []
+            boundary_data = []
+            #------------
             print('Training model')
             # First train on VGG loss only
             if self.train_vgg:
@@ -178,7 +182,7 @@ class GENGAN:
                     print('VGG loss', VGG_loss_cur)
                     self.validate(i, val_data_generator, self.sess)
                     save(self.save_name + '_vgg', it, self.g_saver, self.sess)
-
+                    vgg_data.append(VGG_loss_cur)
             while it < int(self.num_iterations):
 
                 it += 1
@@ -190,7 +194,6 @@ class GENGAN:
                         print('D_loss', D_loss_cur)
                         it += d_iters
                         D_timer += 1
-                        d_.append(D_loss_cur)
 
                     print('========')
                     G_timer = 0
@@ -200,7 +203,6 @@ class GENGAN:
                         print('G loss', G_loss_cur)
                         it += g_iters
                         G_timer += 1
-                        g_.append(G_loss_cur)
 
                     print('========')
 
@@ -210,7 +212,7 @@ class GENGAN:
                     VGG_loss_cur = self.train(self.sess, self.VGG_solver, self.G_loss_vgg, generator=data_generator, iters=vgg_iters)
                     it += vgg_iters
                     print('VGG loss', VGG_loss_cur)
-                    v_.append(VGG_loss_cur)
+                    vgg_data.append(VGG_loss_cur)
 
                 # BOUNDARY LOSS
 
@@ -218,13 +220,13 @@ class GENGAN:
                     boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('Boundary loss', boundary_loss_cur)
-                    b_.append(boundary_loss_cur)
+                    boundary_data.append(boundary_loss_cur)
                 #L1 LOSS
                 for i in range(1):
                     L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('L1 loss', L1_loss_cur)
-                    l_.append(L1_loss_cur)
+                    l1_data.append(L1_loss_cur)
                 # Save model some of the time
                 #if np.random.random() > 0.25:
                  #   print('Saving model')
@@ -236,7 +238,7 @@ class GENGAN:
 
             print('Saving model')
             save(self.save_name, it, self.saver, self.sess)
-            np.savez_compressed('loss',d = d_,g = g_,b = b_,l = l_,v = v_)
+            np.savez_compressed('loss',vgg = vgg_data,boundary = boundary_data, l1 = l1_data)
         tf.reset_default_graph()
 
     def validate_model(self):
