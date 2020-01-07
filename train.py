@@ -218,7 +218,7 @@ class GENGAN:
                     boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('Boundary loss', boundary_loss_cur)
-                    b_.append(boundaty_loss_cur)
+                    b_.append(boundary_loss_cur)
                 #L1 LOSS
                 for i in range(1):
                     L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
