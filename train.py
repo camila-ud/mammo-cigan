@@ -159,8 +159,8 @@ class GENGAN:
             # iteration number
             it = 0
             # Number of iterations per epoch for each type of loss
-            d_iters = 5
-            g_iters = 1
+            d_iters = 10
+            g_iters = 2
             boundary_iters = 10
             vgg_iters = 10
             max_iters = 5000
