@@ -184,29 +184,37 @@ class GENGAN:
                     print('VGG loss', VGG_loss_cur)
                     self.validate(i, val_data_generator, self.sess)
                     save(self.save_name + '_vgg', it, self.g_saver, self.sess)
-                    vgg_data.append(VGG_loss_cur)
+                    vgg_data.append([it,VGG_loss_cur])
             while it < int(self.num_iterations):
 
                 it += 1
                 for j in range(1):
-                    D_timer = 0
-                    D_loss_cur = 100.0
-                    while D_loss_cur > D_loss_threshold and D_timer < max_iters:
-                        D_loss_cur = self.train(self.sess, self.D_solver, self.D_loss, generator=data_generator, iters=d_iters)
-                        print('D_loss', D_loss_cur)
-                        it += d_iters
-                        D_timer += 1
-                        d_data.append([it,D_loss_cur])
+                    #D_timer = 0
+                    #D_loss_cur = 100.0
+                    # while D_loss_cur > D_loss_threshold and D_timer < max_iters:
+                    #     D_loss_cur = self.train(self.sess, self.D_solver, self.D_loss, generator=data_generator, iters=d_iters)
+                    #     print('D_loss', D_loss_cur)
+                    #     it += d_iters
+                    #     D_timer += 1
+                    #     d_data.append([it,D_loss_cur])
+                    D_loss_cur = self.train(self.sess, self.D_solver, self.D_loss, generator=data_generator, iters=d_iters)
+                    print('D_loss', D_loss_cur)
+                    it += d_iters
+                    d_data.append([it,D_loss_cur])
 
                     print('========')
                     G_timer = 0
-                    G_loss_cur = 100.0
-                    while G_loss_cur > G_loss_threshold and G_timer < max_iters:
-                        G_loss_cur = self.train(self.sess, self.G_solver, self.G_loss, generator=data_generator, iters=g_iters)
-                        print('G loss', G_loss_cur)
-                        it += g_iters
-                        G_timer += 1
-                        g_data.append([it,G_loss_cur])
+                    # G_loss_cur = 100.0
+                    # while G_loss_cur > G_loss_threshold and G_timer < max_iters:
+                    #     G_loss_cur = self.train(self.sess, self.G_solver, self.G_loss, generator=data_generator, iters=g_iters)
+                    #     print('G loss', G_loss_cur)
+                    #     it += g_iters
+                    #     G_timer += 1
+                    #     g_data.append([it,G_loss_cur])
+                    G_loss_cur = self.train(self.sess, self.G_solver, self.G_loss, generator=data_generator, iters=g_iters)
+                    print('G loss', G_loss_cur)
+                    it += g_iters
+                    g_data.append([it,G_loss_cur])
 
                     print('========')
 
@@ -216,7 +224,7 @@ class GENGAN:
                     VGG_loss_cur = self.train(self.sess, self.VGG_solver, self.G_loss_vgg, generator=data_generator, iters=vgg_iters)
                     it += vgg_iters
                     print('VGG loss', VGG_loss_cur)
-                    vgg_data.append(VGG_loss_cur)
+                    vgg_data.append([it,VGG_loss_cur])
 
                 # BOUNDARY LOSS
 
@@ -224,13 +232,13 @@ class GENGAN:
                     boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('Boundary loss', boundary_loss_cur)
-                    boundary_data.append(boundary_loss_cur)
+                    boundary_data.append([it,boundary_loss_cur])
                 #L1 LOSS
                 for i in range(1):
                     L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('L1 loss', L1_loss_cur)
-                    l1_data.append(L1_loss_cur)
+                    l1_data.append([it,L1_loss_cur])
                 # Save model some of the time
                 #if np.random.random() > 0.25:
                  #   print('Saving model')
