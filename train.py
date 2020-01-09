@@ -161,7 +161,7 @@ class GENGAN:
             # Number of iterations per epoch for each type of loss
             d_iters = 5
             g_iters = 1
-            boundary_iters = 10
+            boundary_iters = 15
             vgg_iters = 10
             max_iters = 5000
             # Alternatively, train the D or G until loss drops below threshold
@@ -184,7 +184,7 @@ class GENGAN:
                     print('VGG loss', VGG_loss_cur)
                     self.validate(i, val_data_generator, self.sess)
                     save(self.save_name + '_vgg', it, self.g_saver, self.sess)
-                    vgg_data.append(VGG_loss_cur)
+                    vgg_data.append([it,VGG_loss_cur])
             while it < int(self.num_iterations):
 
                 it += 1
@@ -216,7 +216,7 @@ class GENGAN:
                     VGG_loss_cur = self.train(self.sess, self.VGG_solver, self.G_loss_vgg, generator=data_generator, iters=vgg_iters)
                     it += vgg_iters
                     print('VGG loss', VGG_loss_cur)
-                    vgg_data.append(VGG_loss_cur)
+                    vgg_data.append([it,VGG_loss_cur])
 
                 # BOUNDARY LOSS
 
@@ -224,13 +224,13 @@ class GENGAN:
                     boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('Boundary loss', boundary_loss_cur)
-                    boundary_data.append(boundary_loss_cur)
+                    boundary_data.append([it,boundary_loss_cur])
                 #L1 LOSS
                 for i in range(1):
                     L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
                     it += boundary_iters
                     print('L1 loss', L1_loss_cur)
-                    l1_data.append(L1_loss_cur)
+                    l1_data.append([it,L1_loss_cur])
                 # Save model some of the time
                 #if np.random.random() > 0.25:
                  #   print('Saving model')
