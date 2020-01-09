@@ -7,7 +7,7 @@ c_dims = 2
 data_type = 'mal'
 
 #epochs = 2500
-epochs = 5000
+epochs = 2500
 
 
 data_dir = '/home/ericwu/gan/data/'

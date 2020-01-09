@@ -50,9 +50,9 @@ class GENGAN:
         self.VGG_solver = self.boundary_loss = self.boundary_solver = self.L1_loss = self.L1_solver = None
 
         # L1 and boundary loss params
-        self.alpha = 0.7
-        self.l1_factor = 500.0
-        self.boundary_factor = 1000.0
+        self.alpha = 0.8
+        self.l1_factor = 600.0
+        self.boundary_factor = 1200.0
 
     def build_model(self):
         print('Building model')
@@ -171,6 +171,8 @@ class GENGAN:
             vgg_data = []
             l1_data = []
             boundary_data = []
+            d_data = []
+            g_data = []
             #------------
             print('Training model')
             # First train on VGG loss only
@@ -194,6 +196,7 @@ class GENGAN:
                         print('D_loss', D_loss_cur)
                         it += d_iters
                         D_timer += 1
+                        d_data.append([it,D_loss_cur])
 
                     print('========')
                     G_timer = 0
@@ -203,6 +206,7 @@ class GENGAN:
                         print('G loss', G_loss_cur)
                         it += g_iters
                         G_timer += 1
+                        g_data.append([it,G_loss_cur])
 
                     print('========')
 
@@ -238,7 +242,7 @@ class GENGAN:
 
             print('Saving model')
             save(self.save_name, it, self.saver, self.sess)
-            np.savez_compressed('loss',vgg = vgg_data,boundary = boundary_data, l1 = l1_data)
+            np.savez_compressed('loss',vgg = vgg_data,boundary = boundary_data, l1 = l1_data,d = d_data,g=g_data)
         tf.reset_default_graph()
 
     def validate_model(self):
