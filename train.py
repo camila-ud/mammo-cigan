@@ -99,6 +99,10 @@ class GENGAN:
         vgg_real_c = build_vgg19(tf.multiply(self.input_real, 1 - self.input_mask))
         vgg_fake_c = build_vgg19(tf.multiply(self.fake_image, 1 - self.input_mask), reuse=True)
 
+
+
+
+
         # Extract VGG weights
         self.G_loss_vgg = tf.reduce_mean(tf.abs(vgg_real_c['input'] - vgg_fake_c['input']))
         vgg_real = build_vgg19(tf.multiply(self.input_real, self.input_mask))
@@ -160,7 +164,7 @@ class GENGAN:
             it = 0
             # Number of iterations per epoch for each type of loss
             d_iters = 5
-            g_iters = 1
+            g_iters = 10
             boundary_iters = 10
             vgg_iters = 10
             max_iters = 5000
