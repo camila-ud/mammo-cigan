@@ -164,8 +164,8 @@ class GENGAN:
             it = 0
             # Number of iterations per epoch for each type of loss
             d_iters = 5
-            g_iters = 10
-            boundary_iters = 10
+            g_iters = 1
+            boundary_iters = 15
             vgg_iters = 10
             max_iters = 5000
             # Alternatively, train the D or G until loss drops below threshold
