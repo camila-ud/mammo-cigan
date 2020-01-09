@@ -367,15 +367,6 @@ class GENGAN:
         data_real = data_X[0:1, :, :, 2:3]
         mask_image = data_mask[0, :, :, 0]
         real_image = data_real[0, :, :, 0]
-        """ # Get non-cancer sample
-        data_c = np.reshape(np.array([1, 0]), (1, 1, 1, c_dims))
-        data_z = np.random.random_sample((1, 1, 1, z_dims))
-        output_ben_mass = sess.run(self.fake_image, feed_dict={
-            self.input_x: data_x,
-            self.input_mask: data_mask,
-            self.input_c: data_c,
-            self.input_z: data_z
-           }) """
         # Get cancer sample
         data_c = np.reshape(np.array([0,1]), (1, 1, 1, c_dims))
         data_z = np.random.random_sample((1, 1, 1, z_dims))
