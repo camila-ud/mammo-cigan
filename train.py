@@ -192,13 +192,15 @@ class GENGAN:
             while it < int(self.num_iterations):
 
                 it += 1
-                for j in range(1):                    
-                    D_timer += 1
-                    d_data.append([it,D_loss_cur])
-                    D_loss_cur = self.train(self.sess, self.D_solver, self.D_loss, generator=data_generator, iters=d_iters)
-                    print('D_loss', D_loss_cur)
-                    it += d_iters
-                    d_data.append([it,D_loss_cur])
+                for j in range(1):   
+                    D_timer = 0
+                    D_loss_cur = 100.0  
+                    while D_loss_cur > D_loss_threshold and D_timer < max_iters:
+                        D_loss_cur = self.train(self.sess, self.D_solver, self.D_loss, generator=data_generator, iters=d_iters)
+                        print('D_loss', D_loss_cur)
+                        it += d_iters
+                        D_timer += 1
+                        d_data.append([it,D_loss_cur])
 
                     print('========')
                     G_timer = 0
