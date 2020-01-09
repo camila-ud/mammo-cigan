@@ -192,15 +192,9 @@ class GENGAN:
             while it < int(self.num_iterations):
 
                 it += 1
-                for j in range(1):
-                    #D_timer = 0
-                    #D_loss_cur = 100.0
-                    # while D_loss_cur > D_loss_threshold and D_timer < max_iters:
-                    #     D_loss_cur = self.train(self.sess, self.D_solver, self.D_loss, generator=data_generator, iters=d_iters)
-                    #     print('D_loss', D_loss_cur)
-                    #     it += d_iters
-                    #     D_timer += 1
-                    #     d_data.append([it,D_loss_cur])
+                for j in range(1):                    
+                    D_timer += 1
+                    d_data.append([it,D_loss_cur])
                     D_loss_cur = self.train(self.sess, self.D_solver, self.D_loss, generator=data_generator, iters=d_iters)
                     print('D_loss', D_loss_cur)
                     it += d_iters
@@ -208,17 +202,13 @@ class GENGAN:
 
                     print('========')
                     G_timer = 0
-                    # G_loss_cur = 100.0
-                    # while G_loss_cur > G_loss_threshold and G_timer < max_iters:
-                    #     G_loss_cur = self.train(self.sess, self.G_solver, self.G_loss, generator=data_generator, iters=g_iters)
-                    #     print('G loss', G_loss_cur)
-                    #     it += g_iters
-                    #     G_timer += 1
-                    #     g_data.append([it,G_loss_cur])
-                    G_loss_cur = self.train(self.sess, self.G_solver, self.G_loss, generator=data_generator, iters=g_iters)
-                    print('G loss', G_loss_cur)
-                    it += g_iters
-                    g_data.append([it,G_loss_cur])
+                    G_loss_cur = 100.0
+                    while G_loss_cur > G_loss_threshold and G_timer < max_iters:
+                         G_loss_cur = self.train(self.sess, self.G_solver, self.G_loss, generator=data_generator, iters=g_iters)
+                         print('G loss', G_loss_cur)
+                         it += g_iters
+                         G_timer += 1
+                         g_data.append([it,G_loss_cur])
 
                     print('========')
 
