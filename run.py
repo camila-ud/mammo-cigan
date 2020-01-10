@@ -55,7 +55,7 @@ if __name__ == '__main__':
             GAN.synthesize_dataset(test_id)
     else:
         # pretrain with VGG
-        train_vgg = True
+        train_vgg = False
         # load VGG pre-trained model
         load_vgg = True
         # load GAN model weights
