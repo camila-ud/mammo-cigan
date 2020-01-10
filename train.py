@@ -50,9 +50,9 @@ class GENGAN:
         self.VGG_solver = self.boundary_loss = self.boundary_solver = self.L1_loss = self.L1_solver = None
 
         # L1 and boundary loss params
-        self.alpha = 0.8
-        self.l1_factor = 600.0
-        self.boundary_factor = 1200.0
+        self.alpha = 1
+        self.l1_factor = 1000.0
+        self.boundary_factor = 1500.0
 
     def build_model(self):
         print('Building model')
@@ -165,7 +165,7 @@ class GENGAN:
             # Number of iterations per epoch for each type of loss
             d_iters = 5
             g_iters = 1
-            boundary_iters = 15
+            boundary_iters = 10
             vgg_iters = 10
             max_iters = 5000
             # Alternatively, train the D or G until loss drops below threshold
