@@ -60,7 +60,7 @@ class GENGAN:
         # Learning rate params
         self.global_step = tf.Variable(0, trainable=False)
         self.learn_rate = tf.train.exponential_decay(learn_rate, self.global_step,
-                                                     500, 0.99, staircase=False)
+                                                     750, 0.99, staircase=False)
 
         # Input variables
         self.input_x = tf.placeholder(tf.float32, [None, self.patch_size, self.patch_size, 1])
