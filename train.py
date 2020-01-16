@@ -324,7 +324,7 @@ class GENGAN:
                     self.input_c: data_c
                    })
                 X_train[i] = pred_img
-                y_train[i] = data_c.reshape((-1, c_dims))
+                
 
             X_train = X_train.reshape((-1, self.patch_size, self.patch_size, 1))
             np.savez_compressed('./samples_sinthesizes', samples = X_train)
