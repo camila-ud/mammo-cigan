@@ -18,7 +18,7 @@ from sys import argv
 import hickle as hkl
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-
+import matplotlib.pyplot as plt
 class GENGAN:
 
     def __init__(self, save_name, load_name, patch_size, num_iterations,
@@ -159,8 +159,8 @@ class GENGAN:
             # iteration number
             it = 0
             # Number of iterations per epoch for each type of loss
-            d_iters = 10
-            g_iters = 2
+            d_iters = 5
+            g_iters = 1
             boundary_iters = 10
             vgg_iters = 10
             max_iters = 5000
@@ -228,17 +228,18 @@ class GENGAN:
 
                 # BOUNDARY LOSS
 
-                for i in range(1):
-                    boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
-                    it += boundary_iters
-                    print('Boundary loss', boundary_loss_cur)
-                    boundary_data.append([it,boundary_loss_cur])
-                #L1 LOSS
-                for i in range(1):
-                    L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
-                    it += boundary_iters
-                    print('L1 loss', L1_loss_cur)
-                    l1_data.append([it,L1_loss_cur])
+                # for i in range(1):
+                #     boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
+                #     it += boundary_iters
+                #     print('Boundary loss', boundary_loss_cur)
+                #     boundary_data.append([it,boundary_loss_cur])
+                # #L1 LOSS
+                # for i in range(1):
+                #     L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
+                #     it += boundary_iters
+                #     print('L1 loss', L1_loss_cur)
+                #     l1_data.append([it,L1_loss_cur])
+                
                 # Save model some of the time
                 #if np.random.random() > 0.25:
                  #   print('Saving model')
@@ -250,8 +251,19 @@ class GENGAN:
 
             print('Saving model')
             save(self.save_name, it, self.saver, self.sess)
-            np.savez_compressed('loss',vgg = vgg_data,boundary = boundary_data, l1 = l1_data,d = d_data,g=g_data)
+            save_loss([vgg_data,d_data,g_data],['vgg','discriminator','generator'])
+            #np.savez_compressed('loss',vgg = vgg_data,boundary = boundary_data, l1 = l1_data,d = d_data,g=g_data)
         tf.reset_default_graph()
+
+    def save_loss(data,legend):
+        fig = plt.figure(figsize = (15,5))
+        l = data.shape[0]
+        for i,c in enumerate(data):
+            plt.subplot(l,1,i+1)
+            plt.plot(c[:,0],c[:,1],label = legend[i])
+            plt.legend()
+        fig.savefig('loss.png')   # save the figure to file
+        plt.close(fig)    # close the figure window
 
     def validate_model(self):
         with tf.Session() as self.sess:

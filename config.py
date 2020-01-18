@@ -1,5 +1,6 @@
 patch_size = 256
-learn_rate = 1e-4
+#learn_rate = 1e-4
+learn_rate = 1e-6
 batch_size = 8
 z_dims = 10
 c_dims = 2
