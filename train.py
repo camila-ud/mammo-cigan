@@ -229,16 +229,16 @@ class GENGAN:
                 # BOUNDARY LOSS
 
                 # for i in range(1):
-                #     boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
-                #     it += boundary_iters
-                #     print('Boundary loss', boundary_loss_cur)
-                #     boundary_data.append([it,boundary_loss_cur])
+                     boundary_loss_cur = self.train(self.sess, self.boundary_solver, self.boundary_loss, generator=data_generator, iters=boundary_iters)
+                     it += boundary_iters
+                     print('Boundary loss', boundary_loss_cur)
+                     boundary_data.append([it,boundary_loss_cur])
                 # #L1 LOSS
                 # for i in range(1):
-                #     L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
-                #     it += boundary_iters
-                #     print('L1 loss', L1_loss_cur)
-                #     l1_data.append([it,L1_loss_cur])
+                     L1_loss_cur = self.train(self.sess, self.L1_solver, self.L1_loss, generator=data_generator, iters=boundary_iters)
+                     it += boundary_iters
+                     print('L1 loss', L1_loss_cur)
+                     l1_data.append([it,L1_loss_cur])
                 
                 # Save model some of the time
                 #if np.random.random() > 0.25:

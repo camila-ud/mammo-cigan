@@ -1,6 +1,6 @@
 patch_size = 256
 #learn_rate = 1e-4
-learn_rate = 1e-6
+learn_rate = 1e-5
 batch_size = 8
 z_dims = 10
 c_dims = 2
@@ -8,7 +8,7 @@ c_dims = 2
 data_type = 'mal'
 
 #epochs = 2500
-epochs = 2500
+epochs = 2000
 
 
 data_dir = '/home/ericwu/gan/data/'
